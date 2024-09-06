@@ -39,7 +39,7 @@ class MambaConfig(PretrainedConfig):
         n_layer=64,
         d_model=2560,
         ssm_cfg=DEFAULT_SSM_CONFIG,  # TODO: refactor?
-        norm_epsilon=1e-5,
+        layer_norm_epsilon=1e-5,
         rms_norm=True,
         residual_in_fp32=True,
         fused_add_norm=True,
@@ -56,7 +56,7 @@ class MambaConfig(PretrainedConfig):
         self.n_layer = n_layer
         self.d_model = d_model
         self.hidden_size = d_model
-        self.norm_epsilon = norm_epsilon
+        self.layer_norm_epsilon = layer_norm_epsilon
         self.rms_norm = rms_norm
         self.residual_in_fp32 = residual_in_fp32
         self.fused_add_norm = fused_add_norm
